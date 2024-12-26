@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resgate Motos e Transporte</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="../images/logo.jpeg" alt="Logotipo Resgate Motos" class="logo">
+            <h1>Resgate Motos e Transporte</h1>
+            <nav>
+                <ul>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#area">Área de Atuação</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#orcamento">Orçamento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main>
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Oferecemos guincho rápido, seguro e eficiente para motos em qualquer situação. Atendimento 24 horas.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Telefone: (XX) XXXX-XXXX</p>
+            <p>Email: contato@resgatemotos.com</p>
+            <p>Redes sociais: Facebook | Instagram</p>
+        </section>
+
+        <section id="area">
+            <h2>Área de Atuação</h2>
+            <p>Atendemos toda a região metropolitana e arredores. Confira o mapa abaixo:</p>
+            <iframe src="https://www.google.com/maps" width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="depoimentos">
+            <h2>Depoimentos</h2>
+            <blockquote>
+                <p>"Excelente serviço! Rápido e confiável." - Cliente satisfeito</p>
+            </blockquote>
+            <blockquote>
+                <p>"Me ajudaram em um momento difícil. Recomendo a todos." - Maria Silva</p>
+            </blockquote>
+        </section>
+
+        <section id="orcamento">
+            <h2>Orçamento</h2>
+            <form action="#" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" pattern="\\(\\d{2}\\) \\d{4,5}-\\d{4}" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="servico">Serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="">Selecione</option>
+                    <option value="guincho">Guincho</option>
+                    <option value="transporte">Transporte</option>
+                </select>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Resgate Motos e Transporte. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("telefone").addEventListener("input", function (e) {
+            let value = e.target.value.replace(/\\D/g, ""); // Remove não números
+            if (value.length > 10) {
+                value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3"); // Formato celular
+            } else {
+                value = value.replace(/^(\d{2})(\d{4})(\d{4}).*/, "($1) $2-$3"); // Formato fixo
+            }
+            e.target.value = value;
+        });
+    </script>
+    
+</body>
+</html>

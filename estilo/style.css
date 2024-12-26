@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #002F6C; /* Azul escuro */
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #E30613;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .logo {
+    width: 500px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 50px;
+}
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#servicos {
+    background-color: #fff;
+    border-left: 5px solid #E30613; /* Vermelho */
+    padding-left: 1rem;
+}
+
+#contato, #area, #depoimentos, #orcamento {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #E30613; /* Vermelho */
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #bf0510;
+}
+
+footer {
+    background-color: #002F6C; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
